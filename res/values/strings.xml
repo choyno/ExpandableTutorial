@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ExpandableListTutorial</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="main_no_items">No Item in the List!!</string>
+    <string name="title_activity_exp_list">ExpList</string>
+
+</resources>
