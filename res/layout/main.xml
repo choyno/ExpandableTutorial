@@ -9,9 +9,11 @@
    
     <ExpandableListView
         android:id="@android:id/list"  
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"  >
-
+        android:layout_width="match_parent"   
+         android:childDivider="#fff"
+         android:childIndicatorEnd="#000"
+        android:layout_height="match_parent" >
+		
     </ExpandableListView>
 
 </RelativeLayout>

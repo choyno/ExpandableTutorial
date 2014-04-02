@@ -1,17 +1,20 @@
 <!-- ?xml version="1.0" encoding="utf-8"? -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="40dip"
-    android:gravity="center_vertical"
-    android:orientation="horizontal" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:id="@+id/expand_child_holder"
+    android:layout_width="match_parent"
+    android:layout_height="40dip"  
+    android:background="#fff" 
+    android:paddingLeft="20dip"
+    android:gravity="center_vertical" 
+    android:orientation="horizontal" > 
+     
 
-    <TextView
+    <RadioButton
         android:id="@+id/tvPlayerName"
-        android:layout_width="wrap_content"
+ 		android:textSize="12sp"
+        android:layout_width="fill_parent"
         android:layout_height="30dip"
-        android:gravity="center_vertical"
-        android:paddingLeft="50dip"
-        android:textSize="14sp" >
-    </TextView>
+        android:gravity="center_vertical" 
+        android:text="hello" />
 
-</LinearLayout>
+</RelativeLayout>

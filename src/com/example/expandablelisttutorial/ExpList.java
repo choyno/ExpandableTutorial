@@ -44,6 +44,7 @@ public class ExpList extends ExpandableListActivity {
 		expList.setIndicatorBounds(width - GetDipsFromPixels(50), width - GetDipsFromPixels(50));
 		expList.setAdapter(new ExpAdapter(this));
 		expList.setGroupIndicator(null);
+		 
 		expList.setOnGroupExpandListener(new OnGroupExpandListener(){
 
 			@Override

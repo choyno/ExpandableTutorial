@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class ExpAdapter extends BaseExpandableListAdapter {
@@ -29,9 +30,19 @@ public class ExpAdapter extends BaseExpandableListAdapter {
 	@SuppressWarnings("static-access")
 	@Override
 	public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
+	
+	
 		if(convertView == null){
 			LayoutInflater inflater = (LayoutInflater) myContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			convertView = inflater.inflate(R.layout.child_row, null);
+		}
+		
+ 
+		
+		if(isLastChild){
+			
+		}else{
+			
 		}
 		
 		TextView tvPlayerName = (TextView) convertView.findViewById(R.id.tvPlayerName); 
@@ -67,9 +78,9 @@ public class ExpAdapter extends BaseExpandableListAdapter {
 			
 		ImageView expand_img = (ImageView) convertView.findViewById(R.id.explist_indicator);
 		if(isExpanded){
-			expand_img.setImageResource(R.drawable.expander_ic_maximized);
+			expand_img.setImageResource(R.drawable.expander_ic_maximized); 
 		}else{
-			expand_img.setImageResource(R.drawable.expander_ic_minimized);
+			expand_img.setImageResource(R.drawable.expander_ic_minimized); 
 		}
 		
 		TextView tvGroupName = (TextView) convertView.findViewById(R.id.tvGroupName);
