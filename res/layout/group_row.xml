@@ -1,29 +1,32 @@
 <!--?xml version="1.0" encoding="utf-8"?-->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/groupname"
-    android:layout_width="fill_parent"
-    android:layout_height="40dip" >
-    
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/groupname"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+     
+
     <ImageView
-        android:id="@+id/childImage"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_margin="5dp"
-        android:background="@drawable/group_indicator"
+        android:id="@+id/explist_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="31dp"
+        android:layout_marginTop="15dp"
+        android:tag="off" 
         android:contentDescription="@string/hello_world" />
-    
+
     <TextView
         android:id="@+id/tvGroupName"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/hello_world"
-        android:gravity="center_vertical"
-        android:paddingLeft="30dip"
-        android:textSize="16sp"
-        android:textStyle="bold" >
-
-    </TextView>
-
-</LinearLayout>
-
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:textSize="20sp"
+        android:text="hello"
+        android:layout_marginTop="22dp"
+        android:contentDescription="@string/hello_world"/> 
+</RelativeLayout>
   

@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ExpAdapter extends BaseExpandableListAdapter {
@@ -63,6 +64,15 @@ public class ExpAdapter extends BaseExpandableListAdapter {
 			LayoutInflater inflater = (LayoutInflater) myContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			convertView = inflater.inflate(R.layout.group_row, null);
 		}
+			
+		ImageView expand_img = (ImageView) convertView.findViewById(R.id.explist_indicator);
+		if(isExpanded){
+			expand_img.setTag("on");
+			expand_img.setImageResource(R.drawable.expander_ic_maximized);
+		}else{
+			expand_img.setTag("off");
+			expand_img.setImageResource(R.drawable.expander_ic_minimized);
+		}
 		
 		TextView tvGroupName = (TextView) convertView.findViewById(R.id.tvGroupName);
 		tvGroupName.setText(expList.arrGroupElements[groupPosition]);
@@ -70,6 +80,12 @@ public class ExpAdapter extends BaseExpandableListAdapter {
 		return convertView;
 		
 	}
+	private ImageView findViewById(int explistIndicator) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 	@Override
 	public boolean hasStableIds() {
 		return false;

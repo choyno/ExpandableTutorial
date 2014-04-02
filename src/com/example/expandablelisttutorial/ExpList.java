@@ -43,11 +43,14 @@ public class ExpList extends ExpandableListActivity {
 		width = metrics.widthPixels;
 		expList.setIndicatorBounds(width - GetDipsFromPixels(50), width - GetDipsFromPixels(50));
 		expList.setAdapter(new ExpAdapter(this));
+		expList.setGroupIndicator(null);
 		expList.setOnGroupExpandListener(new OnGroupExpandListener(){
 
 			@Override
 			public void onGroupExpand(int groupPosition) { 
-				Log.d("OnGroupExpand", "=========");
+				Log.d("OnGroupExpand", ""+groupPosition);
+				
+				
 			}
 		});
 		
