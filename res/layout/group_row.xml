@@ -4,7 +4,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/groupname"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_marginBottom="10dp"
+     android:layout_marginTop="10dp"
+     android:padding="5dp"
+    android:background="#fff"
+    android:layout_height="30dp" >
      
 
     <ImageView
@@ -12,9 +16,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" 
         android:layout_alignParentRight="true"
-        android:layout_marginRight="31dp"
-        android:layout_marginTop="15dp"
-        android:tag="off" 
+        android:layout_marginRight="31dp" 
+        android:layout_marginTop="5dp" 
         android:contentDescription="@string/hello_world" />
 
     <TextView
@@ -24,9 +27,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="18dp"
-        android:textSize="20sp"
-        android:text="hello"
-        android:layout_marginTop="22dp"
+        android:textSize="17sp"
+        android:text="hello" 
         android:contentDescription="@string/hello_world"/> 
 </RelativeLayout>
   

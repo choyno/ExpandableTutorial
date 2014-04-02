@@ -67,10 +67,8 @@ public class ExpAdapter extends BaseExpandableListAdapter {
 			
 		ImageView expand_img = (ImageView) convertView.findViewById(R.id.explist_indicator);
 		if(isExpanded){
-			expand_img.setTag("on");
 			expand_img.setImageResource(R.drawable.expander_ic_maximized);
 		}else{
-			expand_img.setTag("off");
 			expand_img.setImageResource(R.drawable.expander_ic_minimized);
 		}
 		
