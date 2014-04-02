@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
-import android.widget.RadioButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class ExpAdapter extends BaseExpandableListAdapter {
@@ -36,14 +36,8 @@ public class ExpAdapter extends BaseExpandableListAdapter {
 			LayoutInflater inflater = (LayoutInflater) myContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			convertView = inflater.inflate(R.layout.child_row, null);
 		}
+		 
 		
- 
-		
-		if(isLastChild){
-			
-		}else{
-			
-		}
 		
 		TextView tvPlayerName = (TextView) convertView.findViewById(R.id.tvPlayerName); 
 		
@@ -77,9 +71,12 @@ public class ExpAdapter extends BaseExpandableListAdapter {
 		}
 			
 		ImageView expand_img = (ImageView) convertView.findViewById(R.id.explist_indicator);
+		LinearLayout child_divider = (LinearLayout) convertView.findViewById(R.id.child_divider);
 		if(isExpanded){
+			child_divider.setVisibility(View.VISIBLE);
 			expand_img.setImageResource(R.drawable.expander_ic_maximized); 
 		}else{
+			child_divider.setVisibility(View.GONE);
 			expand_img.setImageResource(R.drawable.expander_ic_minimized); 
 		}
 		

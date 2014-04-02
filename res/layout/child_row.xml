@@ -6,15 +6,13 @@
     android:background="#fff" 
     android:paddingLeft="20dip"
     android:gravity="center_vertical" 
-    android:orientation="horizontal" > 
-     
-
+    android:orientation="horizontal" >
+    
     <RadioButton
         android:id="@+id/tvPlayerName"
- 		android:textSize="12sp"
         android:layout_width="fill_parent"
         android:layout_height="30dip"
-        android:gravity="center_vertical" 
-        android:text="hello" />
-
+        android:gravity="center_vertical"
+        android:text="hello"
+        android:textSize="12sp" />
 </RelativeLayout>
