@@ -1,45 +1,50 @@
 <!--?xml version="1.0" encoding="utf-8"?-->
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/groupname"
-    android:layout_width="match_parent" 
-     android:layout_marginTop="10dp"
-     android:layout_marginBottom="10dp" 
-     android:padding="5dp" 
+
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp"
     android:background="@drawable/expand_group_holder"
-    android:layout_height="30dp" >
-     
+    android:orientation="vertical"
+    android:padding="5dp" >
 
+    <LinearLayout
+        android:id="@+id/groupname"
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:layout_height="wrap_content" >
 
+        <TextView
+            android:id="@+id/tvGroupName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/hello_world" 
+            android:paddingLeft="2dp"
+            android:layout_weight="99"
+            android:text="hello"
+            android:textSize="15sp" />
 
-    <TextView
-        android:id="@+id/tvGroupName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" 
-        android:paddingLeft="2dp" 
-        android:textSize="15sp"
-        android:text="hello" 
-        android:contentDescription="@string/hello_world"/>
-    
         <ImageView
-        android:id="@+id/explist_indicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" 
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="31dp" 
-        android:layout_marginTop="5dp"  
-        
-        android:contentDescription="@string/hello_world" />
-    	<LinearLayout
-    	android:id="@+id/child_divider"
-    	android:visibility="gone"
+            android:id="@+id/explist_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_weight="1"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/hello_world"
+            android:src="@drawable/expander_ic_minimized" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/child_divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="0dp"
         android:background="#f3f3f3"
-        android:orientation="vertical" > 
-       </LinearLayout>
+        android:orientation="vertical"
+        android:visibility="gone" >
+    </LinearLayout>
+
 </LinearLayout>
 
