@@ -8,11 +8,14 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class ExpAdapter extends BaseExpandableListAdapter {
 
 	private Context myContext;
+
 	ExpList expList = new ExpList();
 	public ExpAdapter(Context context) {
 		myContext = context;
@@ -30,18 +33,14 @@ public class ExpAdapter extends BaseExpandableListAdapter {
 	@SuppressWarnings("static-access")
 	@Override
 	public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
-	
-	
+	 
 		if(convertView == null){
 			LayoutInflater inflater = (LayoutInflater) myContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			convertView = inflater.inflate(R.layout.child_row, null);
-		}
-		 
+		} 
 		
-		
-		TextView tvPlayerName = (TextView) convertView.findViewById(R.id.tvPlayerName); 
-		
-		tvPlayerName.setText(expList.arrChildElements[groupPosition][childPosition]);
+		RadioButton tvPlayerName = (RadioButton) convertView.findViewById(R.id.tvPlayerName); 
+		tvPlayerName.setText(expList.arrChildElements[groupPosition][childPosition]); 
 		return convertView;
 	}
 

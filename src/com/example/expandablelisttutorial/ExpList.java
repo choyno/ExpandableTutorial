@@ -50,8 +50,6 @@ public class ExpList extends ExpandableListActivity {
 			@Override
 			public void onGroupExpand(int groupPosition) { 
 				Log.d("OnGroupExpand", ""+groupPosition);
-				
-				
 			}
 		});
 		
